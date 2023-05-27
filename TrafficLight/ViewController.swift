@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         yellowLight.layer.cornerRadius = redLight.frame.width / 2
         greenLight.layer.cornerRadius = redLight.frame.width / 2
         
+        startButton.layer.cornerRadius = 15
+        
     }
 
     @IBAction func startButtotPressed() {
