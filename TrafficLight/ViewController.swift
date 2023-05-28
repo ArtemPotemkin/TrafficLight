@@ -26,13 +26,21 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         redLight.layer.cornerRadius = redLight.frame.width / 2
         yellowLight.layer.cornerRadius = redLight.frame.width / 2
         greenLight.layer.cornerRadius = redLight.frame.width / 2
+       
         
         startButton.layer.cornerRadius = 15
         
+//        print("Размер стороны, доступный в методе viewDidLoad: \(redLight.frame.height)")
+        
+    }
+    
+    override func viewWillLayoutSubviews() {
+        redLight.layer.cornerRadius = redLight.frame.width / 2
+        yellowLight.layer.cornerRadius = redLight.frame.width / 2
+        greenLight.layer.cornerRadius = redLight.frame.width / 2
     }
 
     @IBAction func startButtotPressed() {
